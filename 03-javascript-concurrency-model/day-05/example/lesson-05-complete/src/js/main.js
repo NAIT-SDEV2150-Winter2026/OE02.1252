@@ -54,17 +54,17 @@ import './components/resource-details.js';
 // ];
 
 // TODO: Stage 1: Fetch resource data from the API
-// const response = await fetch('http://localhost:3000/resources');
-// const data = await response.json();
+const response = await fetch('http://localhost:3000/resources');
+const data = await response.json();
 
 // Instructors: you may want to include a delay to simulate network latency
 // The following also allows us to include explicit use of a Promise in the example
-// await new Promise(resolve => setTimeout(resolve, 1000));
+ await new Promise(resolve => setTimeout(resolve, 1000));
 // Also, demonstrate how to throttle the network in the browser devtools to see loading states
 
 const resultsComponent = document.querySelector('resource-results');
 // TODO: Stage 1: Pass the fetched resources into <resource-results>
-// resultsComponent.results = data;
+ resultsComponent.results = data;
 
 // Filters emit state, main.js updates results and resets details
 const filtersComponent = document.querySelector('resource-filters');
